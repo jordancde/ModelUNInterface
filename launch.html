@@ -1,0 +1,212 @@
+<html>
+<head>
+	<title></title>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="script.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body onload="show();setup();window.resizeTo(890,700)">
+	
+	<img id="background" src="img/un.jpg"/>
+	<div class="block" id="info">
+		<div id="infotext">
+			<div class="topic" id="commTitle" onClick="setup()"></div>
+			<hr id="line">
+			<div class="topic" id="commTopic" onClick="changeTopic()"></div>
+			<div class="topic" ><p id="caucus" onclick="changeCaucus()">Speakers List</p></div>
+		</div>
+		<div id="logoholder"><img id="logo" src="" onClick="setup()"/></div>
+	</div>
+
+	
+	<div id="speakers" class="block">
+		<p class="title">Speakers List<p>
+		<hr>
+		<div id="speakerslist"></div>
+		<button onclick="buttonRemove()"id="selectbutton" class="clickbutton">Remove From Speakers List</button>
+		<button id="speakButton" onClick="speak()" class="clickbutton">Speak</button>
+		<button id="setSpeakingTime" onClick="changeSpeakingTime()" class="clickbutton">Set Speaking Time</button>		
+	</div>
+
+	<div id="committeemembers" class="block">
+		<p class="title" >Comittee Members<p>
+			<hr>
+		<div id="commiteelist">
+			<div onclick="select('#test1')">
+				<li onclick="select('#test1')" id="test1" class="member"></li>
+			</div>
+			<div onclick="select('#test2')">
+				<li onclick="select('#test2')" id="test2" class="member"></li>
+			</div>
+			<div onclick="select('#test3')">
+				<li onclick="select('#test3')" id="test3" class="member"></li>
+			</div>
+			<div onclick="select('#test4')">
+				<li onclick="select('#test4')" id="test4" class="member"></li>
+			</div>
+			<div onclick="select('#test5')">
+				<li onclick="select('#test5')" id="test5" class="member"></li>
+			</div>
+			<div onclick="select('#test6')">
+				<li onclick="select('#test6')" id="test6" class="member"></li>
+			</div>
+			<div onclick="select('#test7')">
+				<li onclick="select('#test7')" id="test7" class="member"></li>
+			</div>
+			<div onclick="select('#test8')">
+				<li onclick="select('#test8')" id="test8" class="member"></li>
+			</div>
+			<div onclick="select('#test9')">
+				<li onclick="select('#test9')" id="test9" class="member"></li>
+			</div>
+			<div onclick="select('#test10')">
+				<li onclick="select('#test10')" id="test10" class="member"></li>
+			</div>
+			<div onclick="select('#test11')">
+				<li onclick="select('#test11')" id="test11" class="member"></li>
+			</div>
+			<div onclick="select('#test12')">
+				<li onclick="select('#test12')" id="test12" class="member"></li>
+			</div>
+			<div onclick="select('#test13')">
+				<li onclick="select('#test13')" id="test13" class="member"></li>
+			</div>
+			<div onclick="select('#test14')">
+				<li onclick="select('#test14')" id="test14" class="member"></li>
+			</div>
+			<div onclick="select('#test15')">
+				<li onclick="select('#test15')" id="test15" class="member"></li>
+			</div>
+			<div onclick="select('#test16')">
+				<li onclick="select('#test16')" id="test16" class="member"></li>
+			</div>
+			<div onclick="select('#test17')">
+				<li onclick="select('#test17')" id="test17" class="member"></li>
+			</div>
+			<div onclick="select('#test18')">
+				<li onclick="select('#test18')" id="test18" class="member"></li>
+			</div>
+			<div onclick="select('#test19')">
+				<li onclick="select('#test19')" id="test19" class="member"></li>
+			</div>
+			<div onclick="select('#test20')">
+				<li onclick="select('#test20')" id="test20" class="member"></li>
+			</div>
+			<div onclick="select('#test21')">
+				<li onclick="select('#test21')" id="test21" class="member"></li>
+			</div>
+			<div onclick="select('#test22')">
+				<li onclick="select('#test22')" id="test22" class="member"></li>
+			</div>
+			<div onclick="select('#test23')">
+				<li onclick="select('#test23')" id="test23" class="member"></li>
+			</div>
+			<div onclick="select('#test24')">
+				<li onclick="select('#test24')" id="test24" class="member"></li>
+			</div>
+			<div onclick="select('#test25')">
+				<li onclick="select('#test25')" id="test25" class="member"></li>
+			</div>
+			<div onclick="select('#test26')">
+				<li onclick="select('#test26')" id="test26" class="member"></li>
+			</div>
+			<div onclick="select('#test27')">
+				<li onclick="select('#test27')" id="test27" class="member"></li>
+			</div>
+			<div onclick="select('#test28')">
+				<li onclick="select('#test28')" id="test28" class="member"></li>
+			</div>
+			<div onclick="select('#test29')">
+				<li onclick="select('#test29')" id="test29" class="member"></li>
+			</div>
+			<div onclick="select('#test30')">
+				<li onclick="select('#test30')" id="test30" class="member"></li>
+			</div>
+			<div onclick="select('#test31')">
+				<li onclick="select('#test31')" id="test31" class="member"></li>
+			</div>
+			<div onclick="select('#test32')">
+				<li onclick="select('#test32')" id="test32" class="member"></li>
+			</div>
+			<div onclick="select('#test33')">
+				<li onclick="select('#test33')" id="test33" class="member"></li>
+			</div>
+			<div onclick="select('#test34')">
+				<li onclick="select('#test34')" id="test34" class="member"></li>
+			</div>
+			<div onclick="select('#test35')">
+				<li onclick="select('#test35')" id="test35" class="member"></li>
+			</div>
+			<div onclick="select('#test36')">
+				<li onclick="select('#test36')" id="test36" class="member"></li>
+			</div>
+			<div onclick="select('#test37')">
+				<li onclick="select('#test37')" id="test37" class="member"></li>
+			</div>
+			<div onclick="select('#test38')">
+				<li onclick="select('#test38')" id="test38" class="member"></li>
+			</div>
+			<div onclick="select('#test39')">
+				<li onclick="select('#test39')" id="test39" class="member"></li>
+			</div>
+			<div onclick="select('#test40')">
+				<li onclick="select('#test40')" id="test40" class="member"></li>
+			</div>
+			<div onclick="select('#test41')">
+				<li onclick="select('#test41')" id="test41" class="member"></li>
+			</div>
+			<div onclick="select('#test42')">
+				<li onclick="select('#test42')" id="test42" class="member"></li>
+			</div>
+			<div onclick="select('#test43')">
+				<li onclick="select('#test43')" id="test43" class="member"></li>
+			</div>
+			<div onclick="select('#test44')">
+				<li onclick="select('#test44')" id="test44" class="member"></li>
+			</div>
+			<div onclick="select('#test45')">
+				<li onclick="select('#test45')" id="test45" class="member"></li>
+			</div>
+			<div onclick="select('#test46')">
+				<li onclick="select('#test46')" id="test46" class="member"></li>
+			</div>
+			<div onclick="select('#test47')">
+				<li onclick="select('#test47')" id="test47" class="member"></li>
+			</div>
+			<div onclick="select('#test48')">
+				<li onclick="select('#test48')" id="test48" class="member"></li>
+			</div>
+			<div onclick="select('#test49')">
+				<li onclick="select('#test49')" id="test49" class="member"></li>
+			</div>
+			<div onclick="select('#test50')">
+				<li onclick="select('#test50')" id="test50" class="member"></li>
+			</div>
+			<div onclick="select('#test51')">
+				<li onclick="select('#test51')" id="test51" class="member"></li>
+			</div>
+			<div onclick="select('#test52')">
+				<li onclick="select('#test52')" id="test52" class="member"></li>
+			</div>
+		    <div onclick="select('#test53')">
+				<li onclick="select('#test53')" id="test53" class="member"></li>
+			</div>
+		</div>
+		<button onclick="buttonSelect()"id="addButton" class="clickbutton" >Add to Speakers List</button>
+	</div>
+
+	<img onClick="fullscreen()" id="fullscreen" src="img/fullscreen.png"/>
+	<div id="resolutions" class="block"><p class="title">Resolution</p><hr><textarea id="textbox" rows="4" cols="50" onClick="this.setSelectionRange(0, this.value.length)">Paste resolutions here.</textarea></div><div>
+	<div id="timer" class="block">
+		<div id="timerholder"><span id="time"></span></div>
+		<input type="button" id="startbutton" class="clickbutton" value="Start" onclick="start();">
+		<input type="button" id="stopbutton" class="clickbutton" value="Stop" onclick="stop();">
+		<input type="button" value="Reset" class="clickbutton" id="resetbutton" onclick="reset()">
+	</div>
+	
+</body>
+</html>
+
+

@@ -1,76 +1,60 @@
 
-var commCounter = 0;
+var commCounter = -1;
 var topicIndex = 0;
+
+var comittees = [];
+comittees.push({ imageURL: "img/sc.png", name: "UNSC (Tutorial)" ,offset: "4.2%", topics: ["NK Tensions"],
+	nations: ["France","Ethiopia","UK","USA","Bolivia","Cote d'Ivoire","Sweden","China","Kuwait","Poland","Russia","Kazakhstan","North Korea","Equatorial Guinea","Netherlands","Peru"]
+});
+comittees.push({ imageURL: "img/sc.png", name: "UNSC (Int/Adv)" ,offset: "4.2%", topics: ["Funding Terrorism","NK Tensions"],
+	nations: ["Russia","Ethiopia","Equatorial Guinea","Cote D\'Ivoire","Qatar","Israel","Iraq","Afghanistan","France","Kuwait","Jordan","USA","Poland","Bolivia","Saudi Arabia","Syria","Germany","China","North Korea","Peru","Kazakhstan","UAE","Iran","Pakistan","Netherlands","UK","Egypt","Lebanon","Sweden","Turkey","South Korea"]
+});
+comittees.push({ imageURL: "img/specpol.png", name: "SPECPOL (Novice)" ,offset: "4.2%", topics: ["Palestine","Kurdistan"],
+	nations: ["Iraq","Kurdistan","Turkey","France","Iran","Azerbaijian","Armenia","Saudi Arabia","Israel","Syria","Spain","Palestine","Serbia","Russia","Kosovo","China","UK","Catelonia","USA","Belgium"]
+});
+comittees.push({ imageURL: "img/specpol.png", name: "SPECPOL (Int)" ,offset: "4.2%", topics: ["Kurdistan","Catalonia","Palestine"],
+	nations: ["China","Israel","Catelonia","Syria","Kosovo","UK","Saudi Arabia","Spain","Belgium","Serbia","Armenia","Palestine","Iraq","France","USA","Turkey","Kurdistan","Russia","Iran","Canada","Ukraine","Azerbajian","Jordan"]
+});
+comittees.push({ imageURL: "img/unhcr.png", name: "UNHCR (Novice)" ,offset: "4.2%", topics: ["Europe Migration","Rohingya"],
+	nations: ["Iraq","UK","Lebanon","Thailand","Nigeria","Sweden","USA","Bangladesh","Myanmar","Jordan","Royinga Rep","Lebanon","Germany","Malaysia","Libya","France","Syria","Greece","Italy","Turkey","Indonesia"]
+});
+comittees.push({ imageURL: "img/unhcr.png", name: "UNHCR (Int)" ,offset: "4.2%", topics: ["Europe Migration","Rohingya","Refugee Integration"],
+	nations: ["Germany","Jordan","Libya","Malaysia","Sweden","Rohingya Rep.","Nigeria","India","Iraq","Indonesia","Afghanistan","Canada","Syria","France","Hungary","Spain","China","Bangladesh","Egypt","USA","Turkey","Russia","Italy","Greece","Myanmar","UK","Israel","Saudi Arabia","Lebanon","Thailand","Netherlands","Switzerland","Croatia","Morocco"]
+});
+comittees.push({ imageURL: "img/wfp.png", name: "WFP (Tutorial)" ,offset: "4.2%", topics: ["Yemen Food Insecurity"],
+	nations: ["Yemen","Saudi Arabia","Qatar","Israel","Egypt","Russia","Houthi Rebels","United Arab Emirates","Iran","Oman","Somalia","Jordan","UK","Kuwait","Eritrea","USA","Djibouti","Bahrain"]
+});
+comittees.push({ imageURL: "img/fifa.png", name: "FIFA (Nov/Int)" ,offset: "4.2%", topics: ["Fee Caps","Alleged Corruption"],
+	nations: ["Russia","Portugal","Colombia","Brazil","Nigeria","Egypt","Sweden","Iceland","Belgium","Spain","Mexico","Uruguay","England","Iran","France","South Korea","Germany","Croatia","Argentina","Qatar","Costa Rica","Switzerland","Poland","Panama"]
+});
+comittees.push({ imageURL: "img/au.png", name: "African Union (Int)" ,offset: "4.2%", topics: ["Child Soldiers","South Sudan"],
+	nations: ["South Sudan","Nigeria","Somalia","Ghana","South Africa","Rwanda","Libya","Burkina Faso","Ethiopia","Mali","Uganda","Mauritania","Cameroon","Sudan","Chad","Sierra Leone","Niger","Egypt","Eritrea","Burundi","DR of Congo","Benin","Liberia","Central African Republic","Guinea","Senegal","Kenya","Togo","Angola"]
+});
+comittees.push({ imageURL: "img/hp.png", name: "Harry Potter" ,offset: "4.2%", topics: ["Minorities","Concealment of Magic"],
+	nations: ["Harry Potter","Professor Snape","Ron Weasley","Professor Umbridge","Molly Weasley","DRCMC","Minister of Magic","Professor McGonagall","Dumbledore","Kreacher","Hermione Granger","Goblin Liaison Office","Werewolves (Representative)","Hagrid","Department of Mysteries"]
+});
 
 function setup(){
 	commCounter++;
+	if(commCounter==comittees.length){commCounter = 0;} 
 	topicIndex = 0;
 	changeTopic();
-	if (commCounter == 1) {
-		var myElements = document.querySelectorAll(".topic");
-		for (var i = 0; i < myElements.length; i++) {
-    		myElements[i].style.top = "4.2%";
-		}
-		var imageURL = "img/sc.jpg";
-		var commName = "United Nations Security Council";
-		var nations = ["China","Ethiopia","South Korea","Italy","Japan","Ukraine","Bolivia","Philippines","Papua New Guinea","Sweden","India","Malaysia","UK","USA","Brunei","Egypt","Uruguay","Nepal","Indonesia","Kazakhstan","Vietnam","Tibet (Representative)","Russia","Bhutan","Senegal","Taiwan (Representative)","North Korea","France","Bolivia","Italy","Malaysia","Iraq","Japan","Turkey","Ukraine","Sweden","Egypt","Vietnam","UK","Kazakhstan","China ","Russia","Senegal","Uruguay","Philippines","Brunei","Ethiopia","Syria","India","USA","Mongolia","Iran"];	
 
-		
-	} else if (commCounter == 2){
-		var myElements = document.querySelectorAll(".topic");
-		for (var i = 0; i < myElements.length; i++) {
-    		myElements[i].style.top = "4.2%";
-		}
-		var imageURL = "img/eu.png";
-		var commName = "European Union";
-		var nations = ["Finland","Denmark","Greece","Italy","France","Austria","Hungary","Sweden","UK","Vatican City (observer state)","Switzerland","Netherlands","Germany","Czech Republic","Belgium","Russia","Poland","Bulgaria","Portugal","Romania","Malta","Cyprus","Turkey (Observer state)","Croatia","Syria (Observer State)","Ireland","USA (Observer State)","Afghanistan","Iraq (Observer State)","Latvia","Canada (observer state)"];	
-	} else if (commCounter == 3){
-		var myElements = document.querySelectorAll(".topic");
-		for (var i = 0; i < myElements.length; i++) {
-    		myElements[i].style.top = "4.2%";
-		}
-		var imageURL = "img/2050.png";
-		var commName = "A.D. 2050";
-		var nations = ["USA","Canada ","China ","Vietnam ","Japan ","Maldives ","United Kingdom ","Germany ","France ","Micronesia","Indonesia ","Thailand ","Philippines ","Brazil ","Kiribati (Island Nation)","Netherlands ","Taiwan","Malaysia ","India  ","Ireland"];
-	
-	}else if (commCounter == 4){
-		var myElements = document.querySelectorAll(".topic");
-		for (var i = 0; i < myElements.length; i++) {
-    		myElements[i].style.top = "4.2%";
-		}
-		var imageURL = "img/crisis.png";
-		var commName = "Crisis Committee";
-		var nations = ["China","Chile","New Zealand","Russia","Japan","USA","Saudi Arabia","UK","Norway","France","Australia","Micronesia","France","OPEC","Marine Biologist","South Africa"];
-
-	}else if (commCounter == 5){
-		var myElements = document.querySelectorAll(".topic");
-		for (var i = 0; i < myElements.length; i++) {
-    		myElements[i].style.top = "4.2%";
-		}
-		var imageURL = "img/unep.png";
-		var commName = "UNEP";
-		var nations = ["China ","Indonesia ","The Philippines ","Thailand ","Vietnam ","Sir Lanka ","Egypt ","Malaysia ","Kiribati","Bangladesh ","South Africa ","India ","France","Turkey ","Pakistan ","Brazil ","China","Morocco ","Samoa","U.S.A","Canada ","Vanuatu","Norway","Malaysia","Russia ","Japan ","Micronesia"];
-
+	var myElements = document.querySelectorAll(".topic");
+	for (var i = 0; i < myElements.length; i++) {
+    	myElements[i].style.top = comittees[commCounter].offset;
 	}
-	 else {
-		var imageURL = "img/mars.png";
-		commCounter = 0;
-		var myElements = document.querySelectorAll(".topic");
-		for (var i = 0; i < myElements.length; i++) {
-    		myElements[i].style.top = "6%";
-		}
 
-		var commName = "Moving to Mars";
-		var nations = ["James Mang","Isaiah Williams","Mateo Huegel","Natalka Bowley","Batool Jafri","Subaydah Aden","Bahara Khalilullah","Emily Standish","Eric Peng","Gabriel Deza","Tory Dockree","Deeksha Polamreddy","Josh Poon","Yazan Jarrad","Veniamin Veselovsky","Volodymyr Gryga","Anton Zubko"];
+	comittees[commCounter].nations.sort();
+	for (var i = 0; i<comittees[commCounter].nations.length;i++){
+		document.getElementById("test"+(i+1)).innerHTML = comittees[commCounter].nations[i];
+	}
+	document.getElementById("commTitle").innerHTML = comittees[commCounter].name;
+	document.getElementById("logo").src = comittees[commCounter].imageURL;
 
-	}
-	nations.sort();
-	for (var i = 0; i<nations.length;i++){
-		document.getElementById("test"+(i+1)).innerHTML = nations[i];
-	}
-	document.getElementById("commTitle").innerHTML = commName;
-	document.getElementById("logo").src = imageURL;
 }
+
+
 var caucusCount = 1;
 function changeCaucus(){
 	var caucuses = ["Speakers List","Moderated Caucus","Unmoderated"];
@@ -84,20 +68,9 @@ function changeCaucus(){
 }
 
 function changeTopic(){
-
-	var topics = [["Disputed Territories","Containing ISIS"],
-	["Migrants in Europe","Terrorism"],
-	["Rising Sea Levels","Artificial Intelligence"],
-	["New Island Nation","Oil in Antarctica"],
-	["Ocean Plastics"],["Colonizing Mars"]];
-
-	if(topicIndex > topics[commCounter-1].length-1){
-
-		topicIndex = 0;
-	}
-	document.getElementById("commTopic").innerHTML = topics[commCounter-1][topicIndex];
+	document.getElementById("commTopic").innerHTML = comittees[commCounter].topics[topicIndex];
 	topicIndex++;
-	
+	if(topicIndex == comittees[commCounter].topics.length){topicIndex = 0;}
 
 }
 
